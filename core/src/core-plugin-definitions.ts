@@ -1229,6 +1229,40 @@ export interface ShareOptions {
 
 //
 
+export interface EmailPlugin extends Plugin {
+  available(): Promise<boolean>;
+  send(options: SendEmailOptions): Promise<any>;
+}
+
+export interface SendEmailOptions {
+  /**
+   * Set the email to send to.
+  */
+  to?: string[];
+
+  /**
+   * Set the email to cc.
+   */
+  cc?: string[];
+
+  /**
+   * Set the email to bc.
+   */
+  bc?: string[];
+
+  /**
+   * Set the email subject.
+   */
+  subject?: string;
+
+  /**
+   * Set the email message.
+   */
+  message?: string;
+}
+
+//
+
 export interface SplashScreenPlugin extends Plugin {
   /**
    * Show the splash screen

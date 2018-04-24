@@ -126,3 +126,8 @@ CAP_PLUGIN(CAPStoragePlugin, "Storage",
 CAP_PLUGIN(CAPToastPlugin, "Toast",
   CAP_PLUGIN_METHOD(show, CAPPluginReturnPromise);
 )
+
+CAP_PLUGIN(CAPSharePlugin, "Email",
+  CAP_PLUGIN_METHOD(send, CAPPluginReturnPromise);
+  CAP_PLUGIN_METHOD(available, CAPPluginReturnPromise);
+)

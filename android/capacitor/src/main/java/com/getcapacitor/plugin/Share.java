@@ -43,4 +43,4 @@ public class Share extends Plugin {
 
     getActivity().startActivity(chooser);
   }
-}
+ }

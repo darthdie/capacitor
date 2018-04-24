@@ -36,6 +36,7 @@ import com.getcapacitor.plugin.SplashScreen;
 import com.getcapacitor.plugin.StatusBar;
 import com.getcapacitor.plugin.Storage;
 import com.getcapacitor.plugin.background.BackgroundTask;
+import com.getcapacitor.plugin.Email;
 import com.getcapacitor.ui.Toast;
 
 import org.apache.cordova.CordovaInterfaceImpl;
@@ -308,6 +309,7 @@ public class Bridge {
     this.registerPlugin(StatusBar.class);
     this.registerPlugin(Storage.class);
     this.registerPlugin(com.getcapacitor.plugin.Toast.class);
+    this.registerPlugin(Email.class);
 
     for (Class<? extends Plugin> pluginClass : this.initialPlugins) {
       this.registerPlugin(pluginClass);
