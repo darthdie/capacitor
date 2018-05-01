@@ -5,8 +5,6 @@ import {
   SendEmailOptions
 } from '../core-plugin-definitions';
 
-declare var navigator:any;
-
 export class EmailPluginWeb extends WebPlugin implements EmailPlugin {
   constructor() {
     super({
@@ -16,7 +14,10 @@ export class EmailPluginWeb extends WebPlugin implements EmailPlugin {
   }
 
   send(options?: SendEmailOptions): Promise<void> {
-    
+    if (options) {
+      return Promise.resolve();
+    }
+    return Promise.resolve();
   }
 
   available(): Promise<boolean> {
